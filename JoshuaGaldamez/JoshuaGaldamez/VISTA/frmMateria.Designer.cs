@@ -31,6 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMateria = new System.Windows.Forms.TextBox();
             this.dtvMateria = new System.Windows.Forms.DataGridView();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvMateria)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,7 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(255, 31);
+            this.label1.Location = new System.Drawing.Point(100, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 0;
@@ -46,7 +49,7 @@
             // 
             // txtMateria
             // 
-            this.txtMateria.Location = new System.Drawing.Point(219, 66);
+            this.txtMateria.Location = new System.Drawing.Point(61, 30);
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.Size = new System.Drawing.Size(160, 20);
             this.txtMateria.TabIndex = 1;
@@ -58,12 +61,49 @@
             this.dtvMateria.Name = "dtvMateria";
             this.dtvMateria.Size = new System.Drawing.Size(558, 153);
             this.dtvMateria.TabIndex = 2;
+            this.dtvMateria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMateria_CellContentClick);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(484, 61);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(121, 34);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Editar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(355, 61);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 34);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Guardar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(229, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 35);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Cargar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmMateria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 307);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtvMateria);
             this.Controls.Add(this.txtMateria);
             this.Controls.Add(this.label1);
@@ -81,5 +121,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMateria;
         private System.Windows.Forms.DataGridView dtvMateria;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
