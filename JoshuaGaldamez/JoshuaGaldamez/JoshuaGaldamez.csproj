@@ -85,9 +85,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>notasEstudiantes.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>notasEstudiantes.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VISTA\FrmEstudiantes.cs">
@@ -160,19 +157,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model\notasEstudiantes.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>notasEstudiantes.Context.cs</LastGenOutput>
       <DependentUpon>notasEstudiantes.edmx</DependentUpon>
+      <LastGenOutput>notasEstudiantes.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model\notasEstudiantes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>notasEstudiantes.edmx</DependentUpon>
       <LastGenOutput>notasEstudiantes.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

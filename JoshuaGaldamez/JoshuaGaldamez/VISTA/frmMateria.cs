@@ -19,7 +19,7 @@ namespace JoshuaGaldamez.VISTA
         }
         void cargardatos()
         {
-            using (notasEstudiantesEntities db = new notasEstudiantesEntities())
+            using (notasEstudiantesEntities1 db = new notasEstudiantesEntities1())
 
             {
 

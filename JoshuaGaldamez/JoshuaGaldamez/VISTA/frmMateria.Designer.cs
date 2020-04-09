@@ -38,7 +38,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(216, 28);
+            this.label1.Location = new System.Drawing.Point(255, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 18);
             this.label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // txtMateria
             // 
-            this.txtMateria.Location = new System.Drawing.Point(175, 49);
+            this.txtMateria.Location = new System.Drawing.Point(219, 66);
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.Size = new System.Drawing.Size(160, 20);
             this.txtMateria.TabIndex = 1;

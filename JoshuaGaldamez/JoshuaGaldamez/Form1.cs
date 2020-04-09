@@ -21,7 +21,7 @@ namespace JoshuaGaldamez
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            using (notasEstudiantesEntities db = new notasEstudiantesEntities())
+            using (notasEstudiantesEntities1 db = new notasEstudiantesEntities1())
             {
 
                 var lista = from usuario in db.estudiante

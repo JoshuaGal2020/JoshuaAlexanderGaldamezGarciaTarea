@@ -19,7 +19,7 @@ namespace JoshuaGaldamez.VISTA
         }
         estudiante user = new estudiante();
         void cargardatos() 
-        { using (notasEstudiantesEntities db = new notasEstudiantesEntities())
+        { using (notasEstudiantesEntities1 db = new notasEstudiantesEntities1())
 
             {
 
@@ -38,7 +38,7 @@ namespace JoshuaGaldamez.VISTA
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            using (notasEstudiantesEntities db = new notasEstudiantesEntities())
+            using (notasEstudiantesEntities1 db = new notasEstudiantesEntities1())
             {
                 user.nombre_estudiante = txtNombre.Text;
                 user.apellido = txtApellido.Text;
@@ -59,7 +59,7 @@ namespace JoshuaGaldamez.VISTA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            using (notasEstudiantesEntities db = new notasEstudiantesEntities())
+            using (notasEstudiantesEntities1 db = new notasEstudiantesEntities1())
             {
                 String Id = dtvEstudiante.CurrentRow.Cells[0].Value.ToString();
                 int idc = int.Parse(Id);
