@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JoshuaGaldamez.Model;
+using JoshuaGaldamez.VISTA;
 
 namespace JoshuaGaldamez
 {
@@ -15,6 +17,30 @@ namespace JoshuaGaldamez
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            using (notasEstudiantesEntities db = new notasEstudiantesEntities())
+            {
+
+                var lista = from usuario in db.estudiante
+                            where usuario.usuario == txtUsuario.Text
+                            && usuario.Contrasena == txtContra.Text
+                            select usuario;
+
+                if (lista.Count() > 0)
+                {
+                    frmMenu menu = new frmMenu();
+                    menu.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no existe");
+                }
+
+            }
         }
     }
 }
