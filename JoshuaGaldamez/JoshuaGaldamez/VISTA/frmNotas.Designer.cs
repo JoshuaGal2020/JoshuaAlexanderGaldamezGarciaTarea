@@ -38,16 +38,28 @@
             this.txtIdEstudiante = new System.Windows.Forms.TextBox();
             this.txtIdMateria = new System.Windows.Forms.TextBox();
             this.txtNotas = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtvNotas)).BeginInit();
             this.SuspendLayout();
             // 
             // dtvNotas
             // 
             this.dtvNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvNotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Nombre,
+            this.Materia,
+            this.Nota});
             this.dtvNotas.Location = new System.Drawing.Point(41, 147);
             this.dtvNotas.Name = "dtvNotas";
             this.dtvNotas.Size = new System.Drawing.Size(526, 176);
             this.dtvNotas.TabIndex = 0;
+            this.dtvNotas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvNotas_CellClick);
+            this.dtvNotas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvNotas_CellContentClick);
             // 
             // btnEditar
             // 
@@ -133,11 +145,43 @@
             this.txtNotas.Size = new System.Drawing.Size(100, 20);
             this.txtNotas.TabIndex = 23;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Estudiante";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Materia
+            // 
+            this.Materia.HeaderText = "Materia";
+            this.Materia.Name = "Materia";
+            // 
+            // Nota
+            // 
+            this.Nota.HeaderText = "Nota";
+            this.Nota.Name = "Nota";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(504, 39);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 34);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "CARGAR";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmNotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 346);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNotas);
             this.Controls.Add(this.txtIdMateria);
             this.Controls.Add(this.txtIdEstudiante);
@@ -169,5 +213,10 @@
         private System.Windows.Forms.TextBox txtIdEstudiante;
         private System.Windows.Forms.TextBox txtIdMateria;
         private System.Windows.Forms.TextBox txtNotas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Materia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
+        private System.Windows.Forms.Button button1;
     }
 }

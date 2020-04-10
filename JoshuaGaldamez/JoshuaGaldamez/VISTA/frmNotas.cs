@@ -17,7 +17,10 @@ namespace JoshuaGaldamez.VISTA
         {
             InitializeComponent();
         }
-
+        void limpiarfilas()
+        {
+            dtvNotas.Rows.Clear();
+        }
         notas Not = new notas();
         void cargardatos()
         {
@@ -31,7 +34,7 @@ namespace JoshuaGaldamez.VISTA
 
                                  select new
                                  {
-                                    Id = tbNotas.id_materia,
+                                    Id = tbNotas.id_notas,
                                     Nombre = tbEstudiante.nombre_estudiante,
                                     Materia = tbMateria.nombre_materia,
                                     Nota = tbNotas.nota
@@ -53,21 +56,22 @@ namespace JoshuaGaldamez.VISTA
         }
         private void frmNotas_Load(object sender, EventArgs e)
         {
-            cargardatos();
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             using (notasEstudiantesEntities1 db = new notasEstudiantesEntities1())
             {
-                //Not.id_estudiante = txtIdEstudiante.Text;
-                //Not.id_materia = txtIdMateria.Text;
-                //Not.nota = txtNotas.Text;
+                Not.id_estudiante = int.Parse(txtIdEstudiante.Text);
+                Not.id_materia = int.Parse(txtIdMateria.Text);
+                Not.nota = int.Parse(txtNotas.Text);
 
 
                 db.notas.Add(Not);
                 db.SaveChanges();
             }
+            limpiarfilas();
             cargardatos();
             limpiarDatos();
         }
@@ -77,16 +81,16 @@ namespace JoshuaGaldamez.VISTA
             using (notasEstudiantesEntities1 db = new notasEstudiantesEntities1())
             {
                 String Id = dtvNotas.CurrentRow.Cells[0].Value.ToString();
-                int idc = int.Parse(Id);
-                Not = db.notas.Where(verificarID => verificarID.id_notas == idc).First();
-
-                //Not.id_estudiante = txtIdEstudiante.Text;
-                //Not.id_materia = txtIdMateria.Text;
-                //Not.nota = txtNotas.Text;
+                int Ids = int.Parse(Id);
+                Not = db.notas.Where(verificarId => verificarId.id_notas == Ids).First();
+                Not.id_estudiante = int.Parse(txtIdEstudiante.Text);
+                Not.id_materia = int.Parse(txtIdMateria.Text);
+                Not.nota = int.Parse(txtNotas.Text);
                 db.Entry(Not).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
 
             }
+            limpiarfilas();
             cargardatos();
             limpiarDatos();
         }
@@ -101,8 +105,33 @@ namespace JoshuaGaldamez.VISTA
                 db.notas.Remove(Not);
                 db.SaveChanges();
             }
+            limpiarfilas();
             cargardatos();
             limpiarDatos();
+        }
+
+        private void dtvNotas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            
+        }
+
+        private void dtvNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            String Nombre = dtvNotas.CurrentRow.Cells[1].Value.ToString();
+            String Materia = dtvNotas.CurrentRow.Cells[2].Value.ToString();
+            String Nota = dtvNotas.CurrentRow.Cells[3].ToString();
+          
+            txtIdEstudiante.Text = Nombre;
+            txtIdMateria.Text = Materia;
+            txtNotas.Text = Nota;
+            cargardatos();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            cargardatos();
         }
     }
 }

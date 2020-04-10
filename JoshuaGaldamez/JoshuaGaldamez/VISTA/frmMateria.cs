@@ -76,8 +76,12 @@ namespace JoshuaGaldamez.VISTA
 
         private void dtvMateria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+        private void dtvMateria_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             String Nombre = dtvMateria.CurrentRow.Cells[1].Value.ToString();
-           
+
             txtMateria.Text = Nombre;
 
             cargardatos();

@@ -84,6 +84,11 @@ namespace JoshuaGaldamez.VISTA
 
         private void dtvEstudiante_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dtvEstudiante_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             String Nombre = dtvEstudiante.CurrentRow.Cells[1].Value.ToString();
             String Apellido = dtvEstudiante.CurrentRow.Cells[2].Value.ToString();
             String usuario = dtvEstudiante.CurrentRow.Cells[3].Value.ToString();

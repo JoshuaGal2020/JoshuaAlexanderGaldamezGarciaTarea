@@ -117,6 +117,7 @@
             this.dtvEstudiante.Name = "dtvEstudiante";
             this.dtvEstudiante.Size = new System.Drawing.Size(784, 185);
             this.dtvEstudiante.TabIndex = 15;
+            this.dtvEstudiante.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvEstudiante_CellClick);
             this.dtvEstudiante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvEstudiante_CellContentClick);
             // 
             // label3

@@ -61,6 +61,7 @@
             this.dtvMateria.Name = "dtvMateria";
             this.dtvMateria.Size = new System.Drawing.Size(558, 153);
             this.dtvMateria.TabIndex = 2;
+            this.dtvMateria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMateria_CellClick);
             this.dtvMateria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMateria_CellContentClick);
             // 
             // button4
