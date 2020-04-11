@@ -84,7 +84,6 @@ namespace JoshuaGaldamez.VISTA
 
             txtMateria.Text = Nombre;
 
-            cargardatos();
         }
     }
 

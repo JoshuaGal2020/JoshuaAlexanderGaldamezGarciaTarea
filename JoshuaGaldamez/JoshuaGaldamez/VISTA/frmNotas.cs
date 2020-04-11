@@ -112,20 +112,19 @@ namespace JoshuaGaldamez.VISTA
 
         private void dtvNotas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            String Nombre = dtvNotas.CurrentRow.Cells[1].Value.ToString();
+            String Materia = dtvNotas.CurrentRow.Cells[2].Value.ToString();
+            String Nota = dtvNotas.CurrentRow.Cells[3].Value.ToString();
 
-            
+            txtIdEstudiante.Text = Nombre;
+            txtIdMateria.Text = Materia;
+            txtNotas.Text = Nota;         
+
         }
 
         private void dtvNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            String Nombre = dtvNotas.CurrentRow.Cells[1].Value.ToString();
-            String Materia = dtvNotas.CurrentRow.Cells[2].Value.ToString();
-            String Nota = dtvNotas.CurrentRow.Cells[3].ToString();
-          
-            txtIdEstudiante.Text = Nombre;
-            txtIdMateria.Text = Materia;
-            txtNotas.Text = Nota;
-            cargardatos();
+
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -97,7 +97,7 @@ namespace JoshuaGaldamez.VISTA
             txtApellido.Text = Apellido;
             txtUsuario.Text = usuario;
             txtContrasena.Text = Contra;
-            cargardatos();
+            
         }
     }
 

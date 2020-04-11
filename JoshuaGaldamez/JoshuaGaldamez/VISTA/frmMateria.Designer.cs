@@ -41,6 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Lime;
             this.label1.Location = new System.Drawing.Point(100, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 18);
@@ -49,25 +50,26 @@
             // 
             // txtMateria
             // 
-            this.txtMateria.Location = new System.Drawing.Point(61, 30);
+            this.txtMateria.Location = new System.Drawing.Point(61, 34);
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.Size = new System.Drawing.Size(160, 20);
             this.txtMateria.TabIndex = 1;
             // 
             // dtvMateria
             // 
+            this.dtvMateria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtvMateria.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dtvMateria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtvMateria.Location = new System.Drawing.Point(39, 119);
             this.dtvMateria.Name = "dtvMateria";
-            this.dtvMateria.Size = new System.Drawing.Size(558, 153);
+            this.dtvMateria.Size = new System.Drawing.Size(570, 236);
             this.dtvMateria.TabIndex = 2;
             this.dtvMateria.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMateria_CellClick);
-            this.dtvMateria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvMateria_CellContentClick);
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(484, 61);
+            this.button4.Location = new System.Drawing.Point(515, 67);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 34);
             this.button4.TabIndex = 17;
@@ -78,7 +80,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(355, 61);
+            this.button2.Location = new System.Drawing.Point(360, 67);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 34);
             this.button2.TabIndex = 16;
@@ -89,7 +91,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(229, 60);
+            this.button1.Location = new System.Drawing.Point(207, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 15;
@@ -101,7 +103,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 307);
+            this.BackColor = System.Drawing.Color.DarkMagenta;
+            this.ClientSize = new System.Drawing.Size(648, 367);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -109,6 +112,7 @@
             this.Controls.Add(this.txtMateria);
             this.Controls.Add(this.label1);
             this.Name = "frmMateria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMateria";
             this.Load += new System.EventHandler(this.frmMateria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtvMateria)).EndInit();
