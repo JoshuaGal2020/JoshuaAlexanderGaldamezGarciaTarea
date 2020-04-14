@@ -108,6 +108,7 @@
             this.label3.ForeColor = System.Drawing.Color.Lime;
             this.label3.Location = new System.Drawing.Point(133, 9);
             this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(365, 32);
             this.label3.TabIndex = 9;
             this.label3.Text = "Sistemas de notas 2020";
