@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.estudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.datosEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarMateriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresarNotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarMateriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.datosEstudiantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +60,13 @@
             this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.estudiantesToolStripMenuItem.Text = "Estudiantes";
             // 
+            // datosEstudiantesToolStripMenuItem
+            // 
+            this.datosEstudiantesToolStripMenuItem.Name = "datosEstudiantesToolStripMenuItem";
+            this.datosEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.datosEstudiantesToolStripMenuItem.Text = "Datos estudiantes";
+            this.datosEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.datosEstudiantesToolStripMenuItem_Click);
+            // 
             // materiasToolStripMenuItem
             // 
             this.materiasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -67,6 +75,13 @@
             this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
             this.materiasToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
             this.materiasToolStripMenuItem.Text = "Materias";
+            // 
+            // agregarMateriaToolStripMenuItem
+            // 
+            this.agregarMateriaToolStripMenuItem.Name = "agregarMateriaToolStripMenuItem";
+            this.agregarMateriaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.agregarMateriaToolStripMenuItem.Text = "Agregar materia";
+            this.agregarMateriaToolStripMenuItem.Click += new System.EventHandler(this.agregarMateriaToolStripMenuItem_Click);
             // 
             // notasToolStripMenuItem
             // 
@@ -84,20 +99,6 @@
             this.ingresarNotasToolStripMenuItem.Text = "Ingresar notas";
             this.ingresarNotasToolStripMenuItem.Click += new System.EventHandler(this.ingresarNotasToolStripMenuItem_Click);
             // 
-            // agregarMateriaToolStripMenuItem
-            // 
-            this.agregarMateriaToolStripMenuItem.Name = "agregarMateriaToolStripMenuItem";
-            this.agregarMateriaToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
-            this.agregarMateriaToolStripMenuItem.Text = "Agregar materia";
-            this.agregarMateriaToolStripMenuItem.Click += new System.EventHandler(this.agregarMateriaToolStripMenuItem_Click);
-            // 
-            // datosEstudiantesToolStripMenuItem
-            // 
-            this.datosEstudiantesToolStripMenuItem.Name = "datosEstudiantesToolStripMenuItem";
-            this.datosEstudiantesToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
-            this.datosEstudiantesToolStripMenuItem.Text = "Datos estudiantes";
-            this.datosEstudiantesToolStripMenuItem.Click += new System.EventHandler(this.datosEstudiantesToolStripMenuItem_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,6 +106,7 @@
             this.BackColor = System.Drawing.Color.DarkMagenta;
             this.ClientSize = new System.Drawing.Size(561, 318);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
