@@ -16,23 +16,29 @@ namespace JoshuaGaldamez.VISTA
         {
             InitializeComponent();
         }
-
-        private void eSTUDIANTESToolStripMenuItem_Click(object sender, EventArgs e)
+        private void frmMenu_Load(object sender, EventArgs e)
         {
-            FrmEstudiantes ES = new FrmEstudiantes();
-            ES.Show();
 
         }
 
-        private void mATERIASToolStripMenuItem_Click(object sender, EventArgs e)
+        private void datosEstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstudiantes ES = new FrmEstudiantes();
+            ES.MdiParent = this;
+            ES.Show();
+        }
+
+        private void agregarMateriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMateria Ma = new frmMateria();
+            Ma.MdiParent = this;
             Ma.Show();
         }
 
-        private void nOTASToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ingresarNotasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmNotas No = new frmNotas();
+            No.MdiParent = this;
             No.Show();
         }
     }

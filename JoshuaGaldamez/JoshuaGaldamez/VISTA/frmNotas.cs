@@ -37,12 +37,14 @@ namespace JoshuaGaldamez.VISTA
                                     Id = tbNotas.id_notas,
                                     Nombre = tbEstudiante.nombre_estudiante,
                                     Materia = tbMateria.nombre_materia,
-                                    Nota = tbNotas.nota
+                                    Nota = tbNotas.nota,
+                                    IDMateria = tbMateria.id_materia,
+                                    IdEstudiante = tbEstudiante.id_estudiante
                                  };
 
                 foreach (var iterarDatos in joinTablas)
                 {
-                    dtvNotas.Rows.Add(iterarDatos.Id, iterarDatos.Nombre, iterarDatos.Materia, iterarDatos.Nota);
+                    dtvNotas.Rows.Add(iterarDatos.Id, iterarDatos.Nombre, iterarDatos.Materia, iterarDatos.Nota, iterarDatos.IDMateria, iterarDatos.IdEstudiante);
                 }
             
             }
@@ -112,8 +114,8 @@ namespace JoshuaGaldamez.VISTA
 
         private void dtvNotas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            String Nombre = dtvNotas.CurrentRow.Cells[1].Value.ToString();
-            String Materia = dtvNotas.CurrentRow.Cells[2].Value.ToString();
+            String Nombre = dtvNotas.CurrentRow.Cells[5].Value.ToString();
+            String Materia = dtvNotas.CurrentRow.Cells[4].Value.ToString();
             String Nota = dtvNotas.CurrentRow.Cells[3].Value.ToString();
 
             txtIdEstudiante.Text = Nombre;
